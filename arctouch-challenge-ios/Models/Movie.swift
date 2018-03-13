@@ -15,6 +15,7 @@ class Movie : Mappable{
     var backdropPath : String?
     var belongsToCollection : Collection?
     var budget : Int?
+    var genreIds: [Int]?
     var genres : [Genre]?
     var homepage : AnyObject?
     var id : Int?
@@ -49,6 +50,7 @@ class Movie : Mappable{
         backdropPath <- map["backdrop_path"]
         belongsToCollection <- map["belongs_to_collection"]
         budget <- map["budget"]
+        genreIds <- map["genre_ids"]
         genres <- map["genres"]
         homepage <- map["homepage"]
         id <- map["id"]

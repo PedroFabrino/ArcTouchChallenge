@@ -29,7 +29,7 @@ class UpcomingViewModel: BaseViewModel {
     
     func fetchUpcomingMovies(for page: Int) {
         print("Fetching page: \(page)")
-        service.upcoming(for: page).subscribe({ (event) in
+        service.upcomingMovies(for: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):
                 self.allMovies.append(contentsOf: movies)
