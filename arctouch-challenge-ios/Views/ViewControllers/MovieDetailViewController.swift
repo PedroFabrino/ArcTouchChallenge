@@ -57,8 +57,8 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
             
             self.title = movie.title
             
-            if let releaseYear = movie.prettyReleaseDate() {
-                self.lblReleaseYear.text = releaseYear
+            if let releaseDate = movie.releaseDate {
+                self.lblReleaseYear.text = "\(releaseDate.year)"
             }
             if let genreName = movie.genres?.first?.name {
                 self.lblGenre.text = genreName

@@ -6,8 +6,6 @@ source 'https://bitbucket.org/altran-ais/specs'
 def shared_pods
   pod 'SwiftyBeaver'
   pod 'SwiftLint'
-#  pod 'RxSwift',    '~> 4.0'
-#  pod 'Moya/RxSwift'
   pod 'RxCocoa',    '~> 4.0'
   pod 'Moya-ObjectMapper/RxSwift'
   pod 'SkeletonView'

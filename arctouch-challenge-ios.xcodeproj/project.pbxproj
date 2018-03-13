@@ -13,6 +13,8 @@
 		2310C0242055245F000D779E /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C0232055245F000D779E /* UIImageView+Loader.swift */; };
 		2310C026205535A3000D779E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C025205535A3000D779E /* MovieDetailViewController.swift */; };
 		2310C02820553612000D779E /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C02720553612000D779E /* MovieDetailViewModel.swift */; };
+		23391BA520576A9C00B3D419 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23391BA420576A9C00B3D419 /* Date+Extension.swift */; };
+		23391BA72057819A00B3D419 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23391BA62057819A00B3D419 /* Log.swift */; };
 		23969A0020547A5C00A2EA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239699FF20547A5C00A2EA2E /* AppDelegate.swift */; };
 		23969A0520547A5C00A2EA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0320547A5C00A2EA2E /* Main.storyboard */; };
 		23969A0720547A5C00A2EA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0620547A5C00A2EA2E /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		2310C0232055245F000D779E /* UIImageView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		2310C025205535A3000D779E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		2310C02720553612000D779E /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		23391BA420576A9C00B3D419 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		23391BA62057819A00B3D419 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		239699FC20547A5C00A2EA2E /* arctouch-challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arctouch-challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		239699FF20547A5C00A2EA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23969A0420547A5C00A2EA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,8 +237,10 @@
 		23969A302054939900A2EA2E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				23391BA62057819A00B3D419 /* Log.swift */,
 				23969A422054A16500A2EA2E /* String+Extensions.swift */,
 				2310C0232055245F000D779E /* UIImageView+Loader.swift */,
+				23391BA420576A9C00B3D419 /* Date+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 			files = (
 				23969A3F20549E8700A2EA2E /* Movie.swift in Sources */,
 				23969A3B20549B9400A2EA2E /* BaseViewController.swift in Sources */,
+				23391BA72057819A00B3D419 /* Log.swift in Sources */,
 				23969A3920549B8100A2EA2E /* BaseViewModel.swift in Sources */,
 				23969A432054A16500A2EA2E /* String+Extensions.swift in Sources */,
 				23969A3D20549BFA00A2EA2E /* MovieProvider.swift in Sources */,
@@ -644,6 +651,7 @@
 				23969A462054A30500A2EA2E /* SpokenLanguage.swift in Sources */,
 				2310C022205521E1000D779E /* UpcomingMoviesViewController.swift in Sources */,
 				23969A4A2054A33F00A2EA2E /* ProductionCompany.swift in Sources */,
+				23391BA520576A9C00B3D419 /* Date+Extension.swift in Sources */,
 				23969A3720549B5800A2EA2E /* ViewModelType.swift in Sources */,
 				23969A542054BFE300A2EA2E /* MovieService.swift in Sources */,
 				2310C026205535A3000D779E /* MovieDetailViewController.swift in Sources */,
@@ -823,7 +831,7 @@
 				DEVELOPMENT_TEAM = 3D84YLM4RJ;
 				INFOPLIST_FILE = "arctouch-challenge-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.fabrino.challenge.arctouch-challenge-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.challenge.arctouch-challenge-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -839,7 +847,7 @@
 				DEVELOPMENT_TEAM = 3D84YLM4RJ;
 				INFOPLIST_FILE = "arctouch-challenge-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.fabrino.challenge.arctouch-challenge-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.challenge.arctouch-challenge-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

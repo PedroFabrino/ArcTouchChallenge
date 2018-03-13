@@ -8,29 +8,59 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
-class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UIViewControllerPreviewingDelegate, UISearchBarDelegate {
+class MoviePresenter: MovieCellPresenter {
+    var movie: Movie
+    
+    init(movie: Movie) {
+        self.movie = movie
+    }
+    
+    var imgPath: String {
+        if let imgUrl = movie.posterFullPath() {
+            return imgUrl
+        } else if let imgUrl = movie.backdropFullPath() {
+            return imgUrl
+        }
+        return ""
+    }
+    
+    var title: String? {
+        return movie.title
+    }
+    
+    var releaseDate: Date? {
+        return movie.releaseDate
+    }
+    
+    var genre: String? {
+        return movie.genres?.first?.name
+    }
+    
+    var avarageNote: String? {
+        if let voteAvarage = movie.voteAverage {
+            return "\(voteAvarage)"
+        }
+        return "\(0.0)"
+    }
+    
+}
+
+class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISearchBarDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var upcomingMoviesPage: Int = 0
-    var upcomingMoviesSearchPage: Int = 0
+    var upcomingMoviesPage: Int = 1
     var selectedMovie: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if traitCollection.forceTouchCapability == .available {
-            registerForPreviewing(with: self, sourceView: view)
-        }
-        
-        searchBar.delegate = self
-        
+        self.searchBar.delegate = self
         self.setupCollectionView()
         self.viewModel = UpcomingViewModel()
-        
-        fetchMovies()
     }
     
     private func setupCollectionView() {
@@ -49,43 +79,18 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UIVie
         navigationController?.hidesBarsOnSwipe = true
     }
     
-    func fetchMovies() {
-        upcomingMoviesPage += 1
+    func fetchMovies(for page: Int) {
         viewModel?.fetchUpcomingMovies(for: upcomingMoviesPage)
-    }
-    
-    func searchMovies(with query: String) {
-        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
-        if query.count > 0 {
-            viewModel?.search(with: query)
-        } else {
-            viewModel?.stopSearch()
-        }
     }
     
     override func setupBindings() {
         viewModel?.upcomingMovies.bind(to: collectionView.rx.items(cellIdentifier: MovieCollectionViewCell.identifier,
                                                                    cellType: MovieCollectionViewCell.self)) {  row, model, cell in
-                                                                    if let imgUrl = model.posterFullPath() {
-                                                                        cell.imgPoster.loadImage(urlString: imgUrl)
-                                                                    } else if let imgUrl = model.backdropFullPath() {
-                                                                        cell.imgPoster.loadImage(urlString: imgUrl)
-                                                                    }
-                                                                    if let title = model.title {
-                                                                        cell.lblName.text = title
-                                                                    }
-                                                                    if let releaseDate = model.prettyReleaseDate() {
-                                                                        cell.lblYear.text = releaseDate
-                                                                    }
-                                                                    if let voteAvarage = model.voteAverage {
-                                                                        cell.lblAvarageNote.text = "\(voteAvarage)"
-                                                                    }
-                                                                    if let genreName = model.genres?.first?.name {
-                                                                        cell.lblGenre.text = genreName
-                                                                    }
+                                                                    cell.presenter = MoviePresenter(movie: model)
                                                                     
                                                                     if row == 16 * self.upcomingMoviesPage {
-                                                                        self.fetchMovies()
+                                                                        self.upcomingMoviesPage += 1
+                                                                        self.fetchMovies(for: self.upcomingMoviesPage)
                                                                     }
             }
             .disposed(by: disposeBag)
@@ -97,41 +102,40 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UIVie
             self?.selectedMovie = selectedMovie
             self?.performSegue(withIdentifier: "showDetails", sender: self)
         }).disposed(by: disposeBag)
+        
+        searchBar.rx.text
+            .orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .asDriver(onErrorJustReturn: "")
+            .drive((viewModel?.searchText)!)
+            .disposed(by: disposeBag)
+        
+        searchBar.rx.text.subscribe(onNext: { [unowned self](query) in
+            if (query?.count)! > 0 {
+                let firstIndex = IndexPath(row: 0, section: 0)
+                if let _ = self.collectionView.cellForItem(at: firstIndex) {
+                    self.collectionView.scrollToItem(at: firstIndex, at: .top, animated: true)
+                }
+            } else {
+                self.upcomingMoviesPage = 1
+                self.fetchMovies(for: self.upcomingMoviesPage)
+            }
+        }).disposed(by: disposeBag)
+        
+        searchBar.rx.searchButtonClicked.subscribe { (event) in
+            switch (event){
+            case .next(_):
+                self.searchBar.resignFirstResponder()
+            default:
+                break
+            }
+        }.disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             (segue.destination as? MovieDetailViewController)?.movie = selectedMovie
         }
-    }
-
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        guard let indexPath = collectionView.indexPathForItem(at: collectionView.convert(location, from: view)), let cell = collectionView.cellForItem(at: indexPath) else {
-            return nil
-        }
-        
-        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
-
-        detailViewController.preferredContentSize = CGSize(width: 0, height: 360)
-        previewingContext.sourceRect = collectionView.convert(cell.frame, to: collectionView.superview!)
-        return detailViewController
-    }
-    
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
-            let navigationController = UINavigationController(rootViewController: viewControllerToCommit)
-            show(navigationController, sender: self)
-        }
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let query = searchBar.text {
-            searchMovies(with: query)
-        }
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchMovies(with: searchText)
     }
 }
 

@@ -29,10 +29,11 @@ class MovieDetailViewModel: BaseViewModel {
             switch (event) {
             case .next(let detailedMovie):
                 self.movie.accept(detailedMovie)
+            
             case .error(let error):
-                print(error)
+                Log.error("Error: \(error.localizedDescription)")
             case .completed:
-                print("Completed")
+                Log.verbose("Completed")
             }
         })
     }

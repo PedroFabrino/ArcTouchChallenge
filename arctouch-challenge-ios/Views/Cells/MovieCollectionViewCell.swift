@@ -8,9 +8,23 @@
 
 import UIKit
 
+protocol MovieCellPresenter {
+    var imgPath: String { get }
+    var title: String? { get }
+    var releaseDate: Date? { get }
+    var genre: String? { get }
+    var avarageNote: String? { get }
+}
+
 class MovieCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "MovieCollectionViewCell"
+    
+    var presenter: MoviePresenter? {
+        didSet {
+            customize()
+        }
+    }
     
     @IBOutlet weak var imgPoster: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -21,6 +35,17 @@ class MovieCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func customize() {
+        guard let presenter = presenter else {
+            return
+        }
+        imgPoster.loadImage(urlString: presenter.imgPath, placeholder: #imageLiteral(resourceName: "posterBlank"), showActivityIndicator: true)
+        lblName.text = presenter.title
+        lblYear.text = "\(presenter.releaseDate?.year ?? 0)"
+        lblGenre.text = presenter.genre
+        lblAvarageNote.text = presenter.avarageNote
     }
 
 }

@@ -11,26 +11,33 @@ import RxSwift
 import RxCocoa
 
 class UpcomingViewModel: BaseViewModel {
-    var upcomingMovies: BehaviorRelay<[Movie]>
+    private(set) var upcomingMovies: BehaviorRelay<[Movie]>
+    private(set) var searchText: BehaviorRelay<String?>
+    
     var service: MovieService
+    
     var allMovies: [Movie] = []
     
     init(movieService: MovieService = MovieService()) {
         self.service = movieService
         self.upcomingMovies = BehaviorRelay<[Movie]>(value: [])
+        self.searchText = BehaviorRelay<String?>(value: nil)
         super.init()
+        
+        self.setupSearchEvent()
     }
     
     func fetchUpcomingMovies(for page: Int) {
+        print("Fetching page: \(page)")
         service.upcoming(for: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):
                 self.allMovies.append(contentsOf: movies)
                 self.upcomingMovies.accept(self.allMovies)
             case .error(let error):
-                print(error.localizedDescription)
+                Log.error("Error: \(error.localizedDescription)")
             case .completed:
-                print("Completed")
+                Log.verbose("Completed")
             }
         }).disposed(by: disposeBag)
     }
@@ -39,16 +46,30 @@ class UpcomingViewModel: BaseViewModel {
         service.search(with: query, and: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):
-                self.upcomingMovies.accept(movies)
+                if movies.count > 0 {
+                    self.upcomingMovies.accept(movies)
+                }
             case .error(let error):
-                print(error.localizedDescription)
+                Log.error("Error: \(error.localizedDescription)")
             case .completed:
-                print("Completed")
+                Log.verbose("Completed")
             }
         }).disposed(by: disposeBag)
     }
     
-    func stopSearch() {
-        fetchUpcomingMovies(for: 1)
+    func setupSearchEvent() {
+        searchText.subscribe { (event) in
+            switch (event) {
+            case .next(let query):
+                if let query = query,
+                    query.count > 0{
+                    self.search(with: query)
+                }
+            case .error(let error):
+                Log.error("Error: \(error.localizedDescription)")
+            case .completed:
+                Log.verbose("Completed")
+            }
+        }.disposed(by: disposeBag)
     }
 }

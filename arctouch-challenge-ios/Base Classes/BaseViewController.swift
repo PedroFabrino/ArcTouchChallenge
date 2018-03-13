@@ -15,6 +15,8 @@ class BaseViewController<T>: UIViewController {
     // MARK: Properties
     var viewModel: T?
     let disposeBag = DisposeBag()
+    
+    
     private var didSetupBinding: Bool = false
     
     override func viewWillAppear(_ animated: Bool) {

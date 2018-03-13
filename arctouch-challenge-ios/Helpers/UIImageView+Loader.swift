@@ -1,9 +1,9 @@
 //
 //  UIImageView+Loader.swift
-//  BMWChallenge
+//  arctouch-challenge-ios
 //
-//  Created by Pedro H J Fabrino on 07/02/18.
-//  Copyright © 2018 Pedro H J Fabrino. All rights reserved.
+//  Created by Pedro H J Fabrino on 12/03/18.
+//  Copyright © 2018 AIS Digital. All rights reserved.
 //
 
 import UIKit

@@ -26,7 +26,7 @@ class Movie : Mappable{
     var posterPath : String?
     var productionCompanies : [ProductionCompany]?
     var productionCountries : [ProductionCountry]?
-    var releaseDate : String?
+    var releaseDate : Date?
     var revenue : Int?
     var runtime : Int?
     var spokenLanguages : [SpokenLanguage]?
@@ -42,6 +42,9 @@ class Movie : Mappable{
     
     func mapping(map: Map)
     {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
         adult <- map["adult"]
         backdropPath <- map["backdrop_path"]
         belongsToCollection <- map["belongs_to_collection"]
@@ -57,7 +60,7 @@ class Movie : Mappable{
         posterPath <- map["poster_path"]
         productionCompanies <- map["production_companies"]
         productionCountries <- map["production_countries"]
-        releaseDate <- map["release_date"]
+        releaseDate <- (map["release_date"], DateFormatterTransform(dateFormatter: dateFormatter))
         revenue <- map["revenue"]
         runtime <- map["runtime"]
         spokenLanguages <- map["spoken_languages"]
@@ -81,17 +84,5 @@ class Movie : Mappable{
             return "https://image.tmdb.org/t/p/w\(width)" + path
         }
         return nil
-    }
-    
-    func prettyReleaseDate() -> String? {
-        if let releaseDate = self.releaseDate {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            if let date = dateFormatter.date(from: releaseDate) {
-                dateFormatter.dateStyle = .medium
-                return dateFormatter.string(from: date)
-            }
-        }
-        return ""
     }
 }
