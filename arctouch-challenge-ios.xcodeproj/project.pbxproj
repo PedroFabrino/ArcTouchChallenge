@@ -7,13 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094B281B3DDCCA7277011E4D /* Pods_arctouch_challenge_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B406E16ABD83665CA6B2E5F /* Pods_arctouch_challenge_iosTests.framework */; };
+		2310C01F20551F3D000D779E /* UpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C01E20551F3D000D779E /* UpcomingViewModel.swift */; };
+		2310C022205521E1000D779E /* UpcomingMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C021205521E1000D779E /* UpcomingMoviesViewController.swift */; };
+		2310C0242055245F000D779E /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C0232055245F000D779E /* UIImageView+Loader.swift */; };
+		2310C026205535A3000D779E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C025205535A3000D779E /* MovieDetailViewController.swift */; };
+		2310C02820553612000D779E /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310C02720553612000D779E /* MovieDetailViewModel.swift */; };
 		23969A0020547A5C00A2EA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239699FF20547A5C00A2EA2E /* AppDelegate.swift */; };
-		23969A0220547A5C00A2EA2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A0120547A5C00A2EA2E /* ViewController.swift */; };
 		23969A0520547A5C00A2EA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0320547A5C00A2EA2E /* Main.storyboard */; };
 		23969A0720547A5C00A2EA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0620547A5C00A2EA2E /* Assets.xcassets */; };
 		23969A0A20547A5C00A2EA2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0820547A5C00A2EA2E /* LaunchScreen.storyboard */; };
 		23969A1520547A5C00A2EA2E /* arctouch_challenge_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A1420547A5C00A2EA2E /* arctouch_challenge_iosTests.swift */; };
 		23969A2020547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A1F20547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift */; };
+		23969A3720549B5800A2EA2E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3620549B5800A2EA2E /* ViewModelType.swift */; };
+		23969A3920549B8100A2EA2E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3820549B8100A2EA2E /* BaseViewModel.swift */; };
+		23969A3B20549B9400A2EA2E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3A20549B9400A2EA2E /* BaseViewController.swift */; };
+		23969A3D20549BFA00A2EA2E /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3C20549BFA00A2EA2E /* MovieProvider.swift */; };
+		23969A3F20549E8700A2EA2E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3E20549E8700A2EA2E /* Movie.swift */; };
+		23969A4120549F1D00A2EA2E /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4020549F1D00A2EA2E /* Genre.swift */; };
+		23969A432054A16500A2EA2E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A422054A16500A2EA2E /* String+Extensions.swift */; };
+		23969A462054A30500A2EA2E /* SpokenLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A452054A30500A2EA2E /* SpokenLanguage.swift */; };
+		23969A482054A32100A2EA2E /* ProductionCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A472054A32100A2EA2E /* ProductionCountry.swift */; };
+		23969A4A2054A33F00A2EA2E /* ProductionCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A492054A33F00A2EA2E /* ProductionCompany.swift */; };
+		23969A4C2054A3E000A2EA2E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4B2054A3E000A2EA2E /* Collection.swift */; };
+		23969A502054B70900A2EA2E /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4F2054B70900A2EA2E /* BaseProvider.swift */; };
+		23969A522054B7A000A2EA2E /* Variables.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23969A512054B7A000A2EA2E /* Variables.plist */; };
+		23969A542054BFE300A2EA2E /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A532054BFE300A2EA2E /* MovieService.swift */; };
+		23969A582054DBDD00A2EA2E /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */; };
+		23969A592054DBDD00A2EA2E /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */; };
+		36B7940EB682E17E18A50FCA /* Pods_arctouch_challenge_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */; };
+		79021752D6644890ADDF3C08 /* Pods_arctouch_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724162C15CC9AF118B344AAF /* Pods_arctouch_challenge_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2310C01E20551F3D000D779E /* UpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewModel.swift; sourceTree = "<group>"; };
+		2310C021205521E1000D779E /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
+		2310C0232055245F000D779E /* UIImageView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
+		2310C025205535A3000D779E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		2310C02720553612000D779E /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		239699FC20547A5C00A2EA2E /* arctouch-challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arctouch-challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		239699FF20547A5C00A2EA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23969A0120547A5C00A2EA2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23969A0420547A5C00A2EA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23969A0620547A5C00A2EA2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23969A0920547A5C00A2EA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +74,31 @@
 		23969A1B20547A5C00A2EA2E /* arctouch-challenge-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arctouch-challenge-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23969A1F20547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arctouch_challenge_iosUITests.swift; sourceTree = "<group>"; };
 		23969A2120547A5D00A2EA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23969A3620549B5800A2EA2E /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		23969A3820549B8100A2EA2E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		23969A3A20549B9400A2EA2E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		23969A3C20549BFA00A2EA2E /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
+		23969A3E20549E8700A2EA2E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		23969A4020549F1D00A2EA2E /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		23969A422054A16500A2EA2E /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		23969A452054A30500A2EA2E /* SpokenLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenLanguage.swift; sourceTree = "<group>"; };
+		23969A472054A32100A2EA2E /* ProductionCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCountry.swift; sourceTree = "<group>"; };
+		23969A492054A33F00A2EA2E /* ProductionCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCompany.swift; sourceTree = "<group>"; };
+		23969A4B2054A3E000A2EA2E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		23969A4F2054B70900A2EA2E /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
+		23969A512054B7A000A2EA2E /* Variables.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Variables.plist; sourceTree = "<group>"; };
+		23969A532054BFE300A2EA2E /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		257BF19EDFA9AABC97C801B1 /* Pods-arctouch-challenge-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2744861DF4600685719220FC /* Pods-arctouch-challenge-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arctouch_challenge_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		724162C15CC9AF118B344AAF /* Pods_arctouch_challenge_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arctouch_challenge_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B406E16ABD83665CA6B2E5F /* Pods_arctouch_challenge_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arctouch_challenge_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE9C9393F0F7FC07A357E55 /* Pods-arctouch-challenge-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-ios/Pods-arctouch-challenge-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D26644C693B548F4D4FFADA1 /* Pods-arctouch-challenge-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-ios/Pods-arctouch-challenge-ios.release.xcconfig"; sourceTree = "<group>"; };
+		D585B34E071A3F88A5EE29B0 /* Pods-arctouch-challenge-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F31738DCA9EACF348F9C91A9 /* Pods-arctouch-challenge-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79021752D6644890ADDF3C08 /* Pods_arctouch_challenge_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094B281B3DDCCA7277011E4D /* Pods_arctouch_challenge_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +122,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B7940EB682E17E18A50FCA /* Pods_arctouch_challenge_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2310C02020552189000D779E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2310C021205521E1000D779E /* UpcomingMoviesViewController.swift */,
+				2310C025205535A3000D779E /* MovieDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		239699F320547A5C00A2EA2E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +145,8 @@
 				23969A1320547A5C00A2EA2E /* arctouch-challenge-iosTests */,
 				23969A1E20547A5D00A2EA2E /* arctouch-challenge-iosUITests */,
 				239699FD20547A5C00A2EA2E /* Products */,
+				93E0A77C07EA8D2BAA63C4D4 /* Pods */,
+				BA7A573D4D6C2CFA7BC4E73C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +163,17 @@
 		239699FE20547A5C00A2EA2E /* arctouch-challenge-ios */ = {
 			isa = PBXGroup;
 			children = (
-				239699FF20547A5C00A2EA2E /* AppDelegate.swift */,
-				23969A0120547A5C00A2EA2E /* ViewController.swift */,
+				23969A35205493D100A2EA2E /* Providers */,
+				23969A34205493CC00A2EA2E /* Services */,
+				23969A33205493BB00A2EA2E /* Base Classes */,
+				23969A32205493AC00A2EA2E /* Protocols */,
+				23969A31205493A800A2EA2E /* Resources */,
+				23969A302054939900A2EA2E /* Helpers */,
+				23969A2F2054938E00A2EA2E /* Models */,
+				23969A2E2054937E00A2EA2E /* Views */,
 				23969A0320547A5C00A2EA2E /* Main.storyboard */,
+				23969A2D2054936A00A2EA2E /* ViewModels */,
+				239699FF20547A5C00A2EA2E /* AppDelegate.swift */,
 				23969A0620547A5C00A2EA2E /* Assets.xcassets */,
 				23969A0820547A5C00A2EA2E /* LaunchScreen.storyboard */,
 				23969A0B20547A5C00A2EA2E /* Info.plist */,
@@ -125,6 +199,120 @@
 			path = "arctouch-challenge-iosUITests";
 			sourceTree = "<group>";
 		};
+		23969A2D2054936A00A2EA2E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2310C01E20551F3D000D779E /* UpcomingViewModel.swift */,
+				2310C02720553612000D779E /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		23969A2E2054937E00A2EA2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2310C02020552189000D779E /* ViewControllers */,
+				23969A552054DBC800A2EA2E /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23969A2F2054938E00A2EA2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23969A3E20549E8700A2EA2E /* Movie.swift */,
+				23969A4020549F1D00A2EA2E /* Genre.swift */,
+				23969A452054A30500A2EA2E /* SpokenLanguage.swift */,
+				23969A472054A32100A2EA2E /* ProductionCountry.swift */,
+				23969A492054A33F00A2EA2E /* ProductionCompany.swift */,
+				23969A4B2054A3E000A2EA2E /* Collection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23969A302054939900A2EA2E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				23969A422054A16500A2EA2E /* String+Extensions.swift */,
+				2310C0232055245F000D779E /* UIImageView+Loader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		23969A31205493A800A2EA2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23969A512054B7A000A2EA2E /* Variables.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23969A32205493AC00A2EA2E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				23969A3620549B5800A2EA2E /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		23969A33205493BB00A2EA2E /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23969A3820549B8100A2EA2E /* BaseViewModel.swift */,
+				23969A3A20549B9400A2EA2E /* BaseViewController.swift */,
+				23969A4F2054B70900A2EA2E /* BaseProvider.swift */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		23969A34205493CC00A2EA2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				23969A532054BFE300A2EA2E /* MovieService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		23969A35205493D100A2EA2E /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				23969A3C20549BFA00A2EA2E /* MovieProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		23969A552054DBC800A2EA2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */,
+				23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		93E0A77C07EA8D2BAA63C4D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEE9C9393F0F7FC07A357E55 /* Pods-arctouch-challenge-ios.debug.xcconfig */,
+				D26644C693B548F4D4FFADA1 /* Pods-arctouch-challenge-ios.release.xcconfig */,
+				2744861DF4600685719220FC /* Pods-arctouch-challenge-iosTests.debug.xcconfig */,
+				F31738DCA9EACF348F9C91A9 /* Pods-arctouch-challenge-iosTests.release.xcconfig */,
+				257BF19EDFA9AABC97C801B1 /* Pods-arctouch-challenge-iosUITests.debug.xcconfig */,
+				D585B34E071A3F88A5EE29B0 /* Pods-arctouch-challenge-iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA7A573D4D6C2CFA7BC4E73C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				724162C15CC9AF118B344AAF /* Pods_arctouch_challenge_ios.framework */,
+				9B406E16ABD83665CA6B2E5F /* Pods_arctouch_challenge_iosTests.framework */,
+				41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23969A2420547A5D00A2EA2E /* Build configuration list for PBXNativeTarget "arctouch-challenge-ios" */;
 			buildPhases = (
+				422C391367E62EFCA2FEBE57 /* [CP] Check Pods Manifest.lock */,
 				239699F820547A5C00A2EA2E /* Sources */,
 				239699F920547A5C00A2EA2E /* Frameworks */,
 				239699FA20547A5C00A2EA2E /* Resources */,
+				C1B709940A4958A3BE95CFAE /* [CP] Embed Pods Frameworks */,
+				B91C0702AF6C6DA003370431 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23969A2720547A5D00A2EA2E /* Build configuration list for PBXNativeTarget "arctouch-challenge-iosTests" */;
 			buildPhases = (
+				4E12F3472AB5DA613F07CAC8 /* [CP] Check Pods Manifest.lock */,
 				23969A0C20547A5C00A2EA2E /* Sources */,
 				23969A0D20547A5C00A2EA2E /* Frameworks */,
 				23969A0E20547A5C00A2EA2E /* Resources */,
+				4830D84DFB3FD96C7CFB7A63 /* [CP] Embed Pods Frameworks */,
+				AF74634C6FB82B605F744B10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +361,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23969A2A20547A5D00A2EA2E /* Build configuration list for PBXNativeTarget "arctouch-challenge-iosUITests" */;
 			buildPhases = (
+				C2578EE83402CCABE1A06FEB /* [CP] Check Pods Manifest.lock */,
 				23969A1720547A5C00A2EA2E /* Sources */,
 				23969A1820547A5C00A2EA2E /* Frameworks */,
 				23969A1920547A5C00A2EA2E /* Resources */,
+				210DA5954690944BA7A5F70B /* [CP] Embed Pods Frameworks */,
+				A16DF677D9D55009B7A474B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +429,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23969A592054DBDD00A2EA2E /* MovieCollectionViewCell.xib in Resources */,
 				23969A0A20547A5C00A2EA2E /* LaunchScreen.storyboard in Resources */,
 				23969A0720547A5C00A2EA2E /* Assets.xcassets in Resources */,
+				23969A522054B7A000A2EA2E /* Variables.plist in Resources */,
 				23969A0520547A5C00A2EA2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +453,206 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		210DA5954690944BA7A5F70B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		422C391367E62EFCA2FEBE57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-arctouch-challenge-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4830D84DFB3FD96C7CFB7A63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E12F3472AB5DA613F07CAC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-arctouch-challenge-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A16DF677D9D55009B7A474B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF74634C6FB82B605F744B10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B91C0702AF6C6DA003370431 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-ios/Pods-arctouch-challenge-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1B709940A4958A3BE95CFAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-ios/Pods-arctouch-challenge-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-ios/Pods-arctouch-challenge-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2578EE83402CCABE1A06FEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-arctouch-challenge-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		239699F820547A5C00A2EA2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23969A0220547A5C00A2EA2E /* ViewController.swift in Sources */,
+				23969A3F20549E8700A2EA2E /* Movie.swift in Sources */,
+				23969A3B20549B9400A2EA2E /* BaseViewController.swift in Sources */,
+				23969A3920549B8100A2EA2E /* BaseViewModel.swift in Sources */,
+				23969A432054A16500A2EA2E /* String+Extensions.swift in Sources */,
+				23969A3D20549BFA00A2EA2E /* MovieProvider.swift in Sources */,
+				23969A4C2054A3E000A2EA2E /* Collection.swift in Sources */,
+				2310C01F20551F3D000D779E /* UpcomingViewModel.swift in Sources */,
 				23969A0020547A5C00A2EA2E /* AppDelegate.swift in Sources */,
+				23969A462054A30500A2EA2E /* SpokenLanguage.swift in Sources */,
+				2310C022205521E1000D779E /* UpcomingMoviesViewController.swift in Sources */,
+				23969A4A2054A33F00A2EA2E /* ProductionCompany.swift in Sources */,
+				23969A3720549B5800A2EA2E /* ViewModelType.swift in Sources */,
+				23969A542054BFE300A2EA2E /* MovieService.swift in Sources */,
+				2310C026205535A3000D779E /* MovieDetailViewController.swift in Sources */,
+				23969A502054B70900A2EA2E /* BaseProvider.swift in Sources */,
+				23969A4120549F1D00A2EA2E /* Genre.swift in Sources */,
+				2310C02820553612000D779E /* MovieDetailViewModel.swift in Sources */,
+				23969A482054A32100A2EA2E /* ProductionCountry.swift in Sources */,
+				23969A582054DBDD00A2EA2E /* MovieCollectionViewCell.swift in Sources */,
+				2310C0242055245F000D779E /* UIImageView+Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +816,7 @@
 		};
 		23969A2520547A5D00A2EA2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE9C9393F0F7FC07A357E55 /* Pods-arctouch-challenge-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +832,7 @@
 		};
 		23969A2620547A5D00A2EA2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26644C693B548F4D4FFADA1 /* Pods-arctouch-challenge-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +848,7 @@
 		};
 		23969A2820547A5D00A2EA2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2744861DF4600685719220FC /* Pods-arctouch-challenge-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +866,7 @@
 		};
 		23969A2920547A5D00A2EA2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31738DCA9EACF348F9C91A9 /* Pods-arctouch-challenge-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +884,7 @@
 		};
 		23969A2B20547A5D00A2EA2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257BF19EDFA9AABC97C801B1 /* Pods-arctouch-challenge-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +901,7 @@
 		};
 		23969A2C20547A5D00A2EA2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D585B34E071A3F88A5EE29B0 /* Pods-arctouch-challenge-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
