@@ -21,15 +21,11 @@ target 'arctouch-challenge-ios' do
 
   target 'arctouch-challenge-iosTests' do
     inherit! :search_paths
-    # Pods for testing
     shared_pods
-#    pod 'RxBlocking', '~> 4.0'
-#    pod 'RxTest',     '~> 4.0'
   end
 
   target 'arctouch-challenge-iosUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end
