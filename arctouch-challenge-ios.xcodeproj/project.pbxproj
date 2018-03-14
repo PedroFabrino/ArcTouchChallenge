@@ -186,7 +186,6 @@
 				23969A302054939900A2EA2E /* Helpers */,
 				23969A2F2054938E00A2EA2E /* Models */,
 				23969A2E2054937E00A2EA2E /* Views */,
-				23969A0320547A5C00A2EA2E /* Main.storyboard */,
 				23969A2D2054936A00A2EA2E /* ViewModels */,
 				239699FF20547A5C00A2EA2E /* AppDelegate.swift */,
 				23969A0620547A5C00A2EA2E /* Assets.xcassets */,
@@ -226,6 +225,7 @@
 		23969A2E2054937E00A2EA2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23E89E3C2059CE4F002F5E14 /* Storyboards */,
 				2310C02020552189000D779E /* ViewControllers */,
 				23969A552054DBC800A2EA2E /* Cells */,
 			);
@@ -313,6 +313,14 @@
 				23E89E392059C6D0002F5E14 /* MovieServiceTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		23E89E3C2059CE4F002F5E14 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				23969A0320547A5C00A2EA2E /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		93E0A77C07EA8D2BAA63C4D4 /* Pods */ = {
