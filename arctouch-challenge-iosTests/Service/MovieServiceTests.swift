@@ -11,8 +11,6 @@ import XCTest
 import Moya
 import RxSwift
 import RxCocoa
-//import RxBlocking
-//import RxTest
 
 class MovieServiceTests: XCTestCase {
     
@@ -29,21 +27,19 @@ class MovieServiceTests: XCTestCase {
     }
     
     func testListUpcomingMoviesWithGenres() {
-        self.measure {
-            let expectation = XCTestExpectation(description: "expect to load upcoming movies list")
-            service?.upcomingMovies(for: 1).subscribe({ (event) in
-                switch event {
-                case .next(let movies):
-                    XCTAssert(!movies.isEmpty, "movies are empty")
-                    XCTAssert(!(movies.first?.genres?.isEmpty)!, "genres are empty")
-                case .error(let error):
-                    XCTFail("movies service list error \(error)")
-                case .completed:
-                    expectation.fulfill()
-                }
-            }).disposed(by: disposeBag)
-            wait(for: [expectation], timeout: 3)
-        }
+        let expectation = XCTestExpectation(description: "expect to load upcoming movies list")
+        service?.upcomingMovies(for: 1).subscribe({ (event) in
+            switch event {
+            case .next(let movies):
+                XCTAssert(!movies.isEmpty, "movies are empty")
+                XCTAssert(!(movies.first?.genres?.isEmpty)!, "genres are empty")
+            case .error(let error):
+                XCTFail("movies service list error \(error)")
+            case .completed:
+                expectation.fulfill()
+            }
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 3)
     }
     
     func testUpcomingMovies() {
@@ -130,3 +126,4 @@ class MovieServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 3)
     }
 }
+
