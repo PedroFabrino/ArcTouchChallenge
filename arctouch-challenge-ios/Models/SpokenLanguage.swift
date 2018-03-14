@@ -8,19 +8,15 @@
 import Foundation
 import ObjectMapper
 
-class SpokenLanguage : Mappable{
+class SpokenLanguage: Mappable {
     
-    var iso6391 : String?
-    var name : String?
+    var iso6391: String?
+    var name: String?
     
-    class func newInstance(map: Map) -> Mappable?{
-        return SpokenLanguage()
-    }
-    required init?(map: Map){}
-    init(){}
+    required init?(map: Map) {}
+    init() {}
     
-    func mapping(map: Map)
-    {
+    func mapping(map: Map) {
         iso6391 <- map["iso_639_1"]
         name <- map["name"]
     }    

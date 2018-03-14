@@ -9,20 +9,15 @@
 import Foundation
 import ObjectMapper
 
-
-class ProductionCountry : Mappable{
+class ProductionCountry: Mappable {
     
-    var iso31661 : String?
-    var name : String?
+    var iso31661: String?
+    var name: String?
     
-    class func newInstance(map: Map) -> Mappable?{
-        return ProductionCountry()
-    }
-    required init?(map: Map){}
-    init(){}
+    required init?(map: Map) {}
+    init() {}
     
-    func mapping(map: Map)
-    {
+    func mapping(map: Map) {
         iso31661 <- map["iso_3166_1"]
         name <- map["name"]
     }

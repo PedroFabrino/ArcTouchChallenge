@@ -9,9 +9,9 @@
 import UIKit
 
 class KeyProvider: NSObject {
-    static func get(_ variable: String) -> [String : String] {
+    static func get(_ variable: String) -> [String: String] {
         if let url = Bundle.main.url(forResource: "Variables", withExtension: "plist"),
-            let values = NSDictionary(contentsOf: url) as? [String : [String:String]] {
+            let values = NSDictionary(contentsOf: url) as? [String: [String: String]] {
             return values[variable] ?? [:]
         }
         return [:]

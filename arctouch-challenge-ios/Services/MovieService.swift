@@ -29,12 +29,12 @@ class MovieService {
                     if let movies = result[0] as? [Movie],
                         let genres = result[1] as? [Genre] {
                         let genresDict = genres.reduce(into: [Int: Genre](), { (dict, genre) in
-                            if let id = genre.id{
+                            if let id = genre.id {
                                 dict[id] = genre
                             }
                         })
                         for movie in movies {
-                            var fullGenres : [Genre] = []
+                            var fullGenres: [Genre] = []
                             if let genreIds = movie.genreIds {
                                 for id in genreIds {
                                     if let genre = genresDict[id] {
@@ -54,11 +54,10 @@ class MovieService {
         }
     }
     
-    
     func upcoming(for page: Int) -> Observable<[Movie]> {
         return provider.rx.request(.upcoming(page: page, language: Locale.preferredLanguages.first ?? "", region: "")).map { (response) -> [Movie] in
             if let json = try? response.mapJSON() as? [String: Any],
-                let movieJSON = json?["results"] as? [[String: Any]]{
+                let movieJSON = json?["results"] as? [[String: Any]] {
                 if let lastPage = json?["total_pages"] as? Int {
                     self.lastUpcomingMoviesPage = lastPage
                 }
@@ -76,7 +75,7 @@ class MovieService {
         return provider.rx.request(.availableGenres(language: Locale.preferredLanguages.first ?? "")).map({ (response) -> [Genre] in
             do {
                 if let json = try response.mapJSON() as? [String: Any],
-                let genresJson = json["genres"] as? [[String: Any]]{
+                let genresJson = json["genres"] as? [[String: Any]] {
                     return Mapper<Genre>().mapArray(JSONArray: genresJson)
                 }
             } catch {
@@ -89,7 +88,7 @@ class MovieService {
     func search(with query: String, and page: Int) -> Observable<[Movie]> {
         return provider.rx.request(.search(query: query, page: page, language: Locale.preferredLanguages.first ?? "")).map { (response) -> [Movie] in
             if let json = try? response.mapJSON() as? [String: Any],
-                let movieJSON = json?["results"] as? [[String: Any]]{
+                let movieJSON = json?["results"] as? [[String: Any]] {
                 return Mapper<Movie>().mapArray(JSONArray: movieJSON)
             }
             return []

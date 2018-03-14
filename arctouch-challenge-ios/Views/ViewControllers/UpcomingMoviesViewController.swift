@@ -127,8 +127,8 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
         }).disposed(by: disposeBag)
         
         searchBar.rx.searchButtonClicked.subscribe { (event) in
-            switch (event){
-            case .next(_):
+            switch (event) {
+            case .next:
                 self.searchBar.resignFirstResponder()
             default:
                 break

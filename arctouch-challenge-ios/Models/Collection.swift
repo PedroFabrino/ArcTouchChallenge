@@ -9,20 +9,16 @@
 import UIKit
 import ObjectMapper
 
-class Collection : Mappable {
-    var backdropPath : String?
-    var id : Int?
-    var name : String?
-    var posterPath : String?
+class Collection: Mappable {
+    var backdropPath: String?
+    var id: Int?
+    var name: String?
+    var posterPath: String?
     
-    class func newInstance(map: Map) -> Mappable?{
-        return Collection()
-    }
-    required init?(map: Map){}
-    init(){}
+    required init?(map: Map) {}
+    init() {}
     
-    func mapping(map: Map)
-    {
+    func mapping(map: Map) {
         backdropPath <- map["backdrop_path"]
         id <- map["id"]
         name <- map["name"]

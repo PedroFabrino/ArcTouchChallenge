@@ -147,6 +147,7 @@
                             <constraint firstAttribute="bottom" secondItem="08a-zH-207" secondAttribute="bottom" priority="901" constant="22" id="EGH-Pf-Nrp"/>
                             <constraint firstItem="08a-zH-207" firstAttribute="leading" secondItem="4Fi-7j-Jh2" secondAttribute="leading" constant="22" id="EQB-6P-m3L"/>
                             <constraint firstItem="08a-zH-207" firstAttribute="centerX" secondItem="4Fi-7j-Jh2" secondAttribute="centerX" id="IBM-NF-WI5"/>
+                            <constraint firstItem="4Fi-7j-Jh2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oza-ax-mT7" secondAttribute="trailing" constant="8" id="O8m-8x-pT1"/>
                             <constraint firstItem="08a-zH-207" firstAttribute="top" secondItem="4Fi-7j-Jh2" secondAttribute="top" constant="22" id="PtK-Ft-gPO"/>
                             <constraint firstItem="Slf-Bz-PIt" firstAttribute="top" secondItem="08a-zH-207" secondAttribute="top" id="W7g-12-bb9"/>
                             <constraint firstItem="WkF-RC-zR2" firstAttribute="top" secondItem="Slf-Bz-PIt" secondAttribute="bottom" constant="8" id="Wid-GT-kei"/>

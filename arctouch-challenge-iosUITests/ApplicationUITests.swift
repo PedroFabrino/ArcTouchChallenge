@@ -8,7 +8,7 @@
 
 import XCTest
 
-class arctouch_challenge_iosUITests: XCTestCase {
+class ApplicationUITests: XCTestCase {
     
     var app: XCUIApplication?
     
@@ -39,8 +39,8 @@ class arctouch_challenge_iosUITests: XCTestCase {
     }
     
     func lazyLoading() {
-        if let _ = app?.collectionViews.element.waitForExistence(timeout: 5),
-            let _ = app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5){
+        if app?.collectionViews.element.waitForExistence(timeout: 5) != nil,
+            app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5) == true {
             app?.collectionViews.element.swipeUp()
             app?.collectionViews.element.swipeUp()
             app?.collectionViews.element.swipeUp()
@@ -49,7 +49,7 @@ class arctouch_challenge_iosUITests: XCTestCase {
     }
     
     func details(of cell: XCUIElement?) {
-        if let _ = cell?.staticTexts.element(boundBy: 0).waitForExistence(timeout: 5),
+        if cell?.staticTexts.element(boundBy: 0).waitForExistence(timeout: 5) == true,
             let cellLabel = cell?.staticTexts.element(boundBy: 0).label {
             cell?.tap()
             if let exists = app?.navigationBars[cellLabel].waitForExistence(timeout: 5) {
@@ -64,7 +64,7 @@ class arctouch_challenge_iosUITests: XCTestCase {
     func search(for query: String) {
         app?.searchFields.element(boundBy: 0).tap()
         app?.searchFields.element(boundBy: 0).typeText(query)
-        if let _ = app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5) {
+        if app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5) == true {
             let cell = app?.collectionViews.element.cells.element(boundBy: 0)
             let cellLabel = cell?.staticTexts.element(boundBy: 0).label
             XCTAssert(cellLabel?.contains(query) ?? false, "movie.title \(String(describing: cellLabel)) doesn't match the searched query \(query)")

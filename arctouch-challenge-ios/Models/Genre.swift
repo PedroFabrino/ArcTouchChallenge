@@ -8,21 +8,15 @@
 import Foundation
 import ObjectMapper
 
-class Genre : Mappable{
-    var id : Int?
-    var name : String?
+class Genre: Mappable {
+    var id: Int?
+    var name: String?
     
-    class func newInstance(map: Map) -> Mappable?{
-        return Genre()
-    }
-    required init?(map: Map){}
-    init(){}
+    required init?(map: Map) {}
+    init() {}
     
-    func mapping(map: Map)
-    {
+    func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
     }
 }
-
-

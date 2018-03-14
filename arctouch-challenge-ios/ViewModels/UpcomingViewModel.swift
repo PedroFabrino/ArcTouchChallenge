@@ -51,7 +51,7 @@ class UpcomingViewModel: BaseViewModel {
         service.search(with: query, and: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):
-                if movies.count > 0 {
+                if !movies.isEmpty {
                     self.upcomingMovies.accept(movies)
                 }
             case .error(let error):
@@ -67,7 +67,7 @@ class UpcomingViewModel: BaseViewModel {
             switch (event) {
             case .next(let query):
                 if let query = query,
-                    query.count > 0{
+                    !query.isEmpty {
                     self.search(with: query)
                 }
             case .error(let error):

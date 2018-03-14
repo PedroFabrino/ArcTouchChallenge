@@ -19,8 +19,7 @@
 		23969A0520547A5C00A2EA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0320547A5C00A2EA2E /* Main.storyboard */; };
 		23969A0720547A5C00A2EA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0620547A5C00A2EA2E /* Assets.xcassets */; };
 		23969A0A20547A5C00A2EA2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23969A0820547A5C00A2EA2E /* LaunchScreen.storyboard */; };
-		23969A1520547A5C00A2EA2E /* arctouch_challenge_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A1420547A5C00A2EA2E /* arctouch_challenge_iosTests.swift */; };
-		23969A2020547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A1F20547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift */; };
+		23969A2020547A5D00A2EA2E /* ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A1F20547A5D00A2EA2E /* ApplicationUITests.swift */; };
 		23969A3720549B5800A2EA2E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3620549B5800A2EA2E /* ViewModelType.swift */; };
 		23969A3920549B8100A2EA2E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3820549B8100A2EA2E /* BaseViewModel.swift */; };
 		23969A3B20549B9400A2EA2E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3A20549B9400A2EA2E /* BaseViewController.swift */; };
@@ -85,10 +84,9 @@
 		23969A0920547A5C00A2EA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23969A0B20547A5C00A2EA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23969A1020547A5C00A2EA2E /* arctouch-challenge-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arctouch-challenge-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23969A1420547A5C00A2EA2E /* arctouch_challenge_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arctouch_challenge_iosTests.swift; sourceTree = "<group>"; };
 		23969A1620547A5C00A2EA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23969A1B20547A5C00A2EA2E /* arctouch-challenge-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arctouch-challenge-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23969A1F20547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arctouch_challenge_iosUITests.swift; sourceTree = "<group>"; };
+		23969A1F20547A5D00A2EA2E /* ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUITests.swift; sourceTree = "<group>"; };
 		23969A2120547A5D00A2EA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23969A3620549B5800A2EA2E /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		23969A3820549B8100A2EA2E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				23E89E2820598052002F5E14 /* Service */,
-				23969A1420547A5C00A2EA2E /* arctouch_challenge_iosTests.swift */,
 				23969A1620547A5C00A2EA2E /* Info.plist */,
 			);
 			path = "arctouch-challenge-iosTests";
@@ -211,7 +208,7 @@
 		23969A1E20547A5D00A2EA2E /* arctouch-challenge-iosUITests */ = {
 			isa = PBXGroup;
 			children = (
-				23969A1F20547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift */,
+				23969A1F20547A5D00A2EA2E /* ApplicationUITests.swift */,
 				23969A2120547A5D00A2EA2E /* Info.plist */,
 			);
 			path = "arctouch-challenge-iosUITests";
@@ -354,6 +351,7 @@
 				239699FA20547A5C00A2EA2E /* Resources */,
 				C1B709940A4958A3BE95CFAE /* [CP] Embed Pods Frameworks */,
 				B91C0702AF6C6DA003370431 /* [CP] Copy Pods Resources */,
+				23E89E3B2059C866002F5E14 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -497,6 +495,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		23E89E3B2059C866002F5E14 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		422C391367E62EFCA2FEBE57 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,8 +543,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -545,8 +555,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -713,7 +721,6 @@
 				23E89E2E2059842B002F5E14 /* Movie.swift in Sources */,
 				23E89E3420598531002F5E14 /* String+Extensions.swift in Sources */,
 				23E89E302059842F002F5E14 /* SpokenLanguage.swift in Sources */,
-				23969A1520547A5C00A2EA2E /* arctouch_challenge_iosTests.swift in Sources */,
 				23E89E332059843B002F5E14 /* Collection.swift in Sources */,
 				23E89E2D20598418002F5E14 /* KeyProvider.swift in Sources */,
 				23E89E3220598439002F5E14 /* ProductionCompany.swift in Sources */,
@@ -726,7 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23969A2020547A5D00A2EA2E /* arctouch_challenge_iosUITests.swift in Sources */,
+				23969A2020547A5D00A2EA2E /* ApplicationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

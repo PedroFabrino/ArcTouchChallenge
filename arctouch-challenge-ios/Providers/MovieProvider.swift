@@ -6,6 +6,9 @@
 //  Copyright © 2018 AIS Digital. All rights reserved.
 //
 
+// Disabling Line length on this file due to Mock JSONs.
+// swiftlint:disable line_length
+
 import Moya
 
 enum MovieProvider {
@@ -83,5 +86,3 @@ extension MovieProvider: TargetType {
         return ["Content-type": "application/json"]
     }
 }
-
-

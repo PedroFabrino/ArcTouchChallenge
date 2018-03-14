@@ -9,40 +9,39 @@
 import Foundation
 import ObjectMapper
 
-class Movie : Mappable{
+class Movie: Mappable {
     
-    var adult : Bool?
-    var backdropPath : String?
-    var belongsToCollection : Collection?
-    var budget : Int?
+    var adult: Bool?
+    var backdropPath: String?
+    var belongsToCollection: Collection?
+    var budget: Int?
     var genreIds: [Int]?
-    var genres : [Genre]?
-    var homepage : AnyObject?
-    var id : Int?
-    var imdbId : String?
-    var originalLanguage : String?
-    var originalTitle : String?
-    var overview : String?
-    var popularity : Float?
-    var posterPath : String?
-    var productionCompanies : [ProductionCompany]?
-    var productionCountries : [ProductionCountry]?
-    var releaseDate : Date?
-    var revenue : Int?
-    var runtime : Int?
-    var spokenLanguages : [SpokenLanguage]?
-    var status : String?
-    var tagline : String?
-    var title : String?
-    var video : Bool?
-    var voteAverage : Float?
-    var voteCount : Int?
+    var genres: [Genre]?
+    var homepage: AnyObject?
+    var id: Int?
+    var imdbId: String?
+    var originalLanguage: String?
+    var originalTitle: String?
+    var overview: String?
+    var popularity: Float?
+    var posterPath: String?
+    var productionCompanies: [ProductionCompany]?
+    var productionCountries: [ProductionCountry]?
+    var releaseDate: Date?
+    var revenue: Int?
+    var runtime: Int?
+    var spokenLanguages: [SpokenLanguage]?
+    var status: String?
+    var tagline: String?
+    var title: String?
+    var video: Bool?
+    var voteAverage: Float?
+    var voteCount: Int?
     
     init() {}
-    required init?(map: Map){}
+    required init?(map: Map) {}
     
-    func mapping(map: Map)
-    {
+    func mapping(map: Map) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
