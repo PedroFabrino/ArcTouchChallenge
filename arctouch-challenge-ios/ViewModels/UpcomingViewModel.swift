@@ -1,0 +1,80 @@
+//
+//  UpcomingViewModel.swift
+//  arctouch-challenge-ios
+//
+//  Created by Pedro H J Fabrino on 11/03/18.
+//  Copyright © 2018 AIS Digital. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+
+class UpcomingViewModel: BaseViewModel {
+    private(set) var upcomingMovies: BehaviorRelay<[Movie]>
+    private(set) var searchText: BehaviorRelay<String?>
+    
+    var service: MovieService
+    
+    fileprivate var allMovies: [Movie] = []
+    
+    init(movieService: MovieService = MovieService()) {
+        self.service = movieService
+        self.upcomingMovies = BehaviorRelay<[Movie]>(value: [])
+        self.searchText = BehaviorRelay<String?>(value: nil)
+        super.init()
+        
+        self.setupSearchEvent()
+    }
+    
+    func moviesCount() -> Int {
+        return allMovies.count
+    }
+    
+    func fetchUpcomingMovies(for page: Int) {
+        Log.verbose("Fetching page: \(page)")
+        service.upcomingMovies(for: page).subscribe({ (event) in
+            switch (event) {
+            case .next(let movies):
+                self.allMovies.append(contentsOf: movies)
+                self.upcomingMovies.accept(self.allMovies)
+            case .error(let error):
+                Log.error("Error: \(error.localizedDescription)")
+            case .completed:
+                Log.verbose("Completed")
+            }
+        }).disposed(by: disposeBag)
+    }
+    
+    func search(with query: String, with page: Int = 1) {
+        Log.verbose("Will search for: \(query)")
+        service.search(with: query, and: page).subscribe({ (event) in
+            switch (event) {
+            case .next(let movies):
+                if !movies.isEmpty {
+                    self.upcomingMovies.accept(movies)
+                }
+            case .error(let error):
+                Log.error("Error: \(error.localizedDescription)")
+            case .completed:
+                Log.verbose("Completed")
+            }
+        }).disposed(by: disposeBag)
+    }
+    
+    func setupSearchEvent() {
+        searchText.subscribe { (event) in
+            switch (event) {
+            case .next(let query):
+                if let query = query,
+                    !query.isEmpty {
+                    self.search(with: query)
+                }
+            case .error(let error):
+                Log.error("Error: \(error.localizedDescription)")
+            case .completed:
+                Log.verbose("Completed")
+            }
+        }.disposed(by: disposeBag)
+    }
+}
