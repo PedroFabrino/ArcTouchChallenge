@@ -26,7 +26,7 @@ CMD + U to run tests.
 * [CocoaPods v1.3.1](https://cocoapods.org) - Dependency Management
 
 ### Libraries used
-* SwiftyBeaver -> Loggin library used for more comprehensible, when needed can log to a server for realtime updates.
+* SwiftyBeaver -> Logging library used for more comprehensible logs, if needed, can log to a server for realtime updates.
 * SwiftLint -> A tool to enforce Swift style and conventions.
 * RxCocoa and RxSwift -> Reactive programming in Swift and MVVM Architeture.
 * Moya -> A network layer abstraction that encapsulates Alamofire with a more readeable and testable code.
