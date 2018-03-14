@@ -9,7 +9,9 @@
 import UIKit
 
 extension Date {
-    var year: Int {
-        return Calendar.current.component(.year, from: self)
+    func string(with format: DateFormatter.Style) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = format
+        return dateFormatter.string(from: self)
     }
 }

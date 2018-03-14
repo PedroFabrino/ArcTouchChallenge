@@ -43,7 +43,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
         }
         imgPoster.loadImage(urlString: presenter.imgPath, placeholder: #imageLiteral(resourceName: "posterBlank"), showActivityIndicator: true)
         lblName.text = presenter.title
-        lblYear.text = "\(presenter.releaseDate?.year ?? 0)"
+        if let date = presenter.releaseDate {
+            lblYear.text = date.string(with: .medium)
+        }
         lblGenre.text = presenter.genre
         lblAvarageNote.text = presenter.avarageNote
     }

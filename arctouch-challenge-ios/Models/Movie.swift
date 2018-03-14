@@ -43,7 +43,7 @@ class Movie: Mappable {
     
     func mapping(map: Map) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-mm-dd"
         
         adult <- map["adult"]
         backdropPath <- map["backdrop_path"]

@@ -55,7 +55,7 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
                 self.imgPoster.loadImage(urlString: path)
             }
             if let releaseDate = movie.releaseDate {
-                self.lblReleaseYear.text = "\(releaseDate.year)"
+                self.lblReleaseYear.text = releaseDate.string(with: .medium)
             }
         }).disposed(by: disposeBag)
     }
