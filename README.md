@@ -26,13 +26,14 @@ CMD + U to run tests.
 * [CocoaPods v1.3.1](https://cocoapods.org) - Dependency Management
 
 ### Libraries used
-* SwiftyBeaver -> Logging library used for more comprehensible logs, if needed, can log to a server for realtime updates.
-* SwiftLint -> A tool to enforce Swift style and conventions.
-* RxCocoa and RxSwift -> Reactive programming in Swift and MVVM Architeture.
-* Moya -> A network layer abstraction that encapsulates Alamofire with a more readeable and testable code.
-* ObjectMapper -> JSON to Object mapper.
-* RSLoadingView -> Utility library used to create a loading view, to prevent a empty view.
-* SDWebImage -> UIImage extension for downloading images asynchronously. 
+* [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) -> Logging library used for more comprehensible logs, if needed, can log to a server for realtime updates.
+* [SwiftLint](https://github.com/realm/SwiftLint) -> "A tool to enforce Swift style and conventions", used to make sure all contributors follow the same guidelines.
+* [RxSwift and RxCocoa](https://github.com/ReactiveX/RxSwift) -> Reactive programming in Swift and MVVM Architeture.
+* [Moya](https://github.com/Moya) -> A network layer abstraction that encapsulates Alamofire with a more readeable and testable code.
+* [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) -> JSON to Object mapper.
+* [Moya+ObjectMapper](https://github.com/ivanbruel/Moya-ObjectMapper) -> Some extensions to make Moya, ObjectMapper and RxSwift communicate better.
+* [RSLoadingView](https://github.com/roytornado/RSLoadingView) -> Utility library used to create a loading view, to prevent a empty view.
+* [SDWebImage](https://github.com/rs/SDWebImage) -> UIImage extension for downloading images asynchronously. 
 
 ## Authors
 
