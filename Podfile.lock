@@ -17,22 +17,22 @@ PODS:
     - RxSwift (~> 4.0)
   - ObjectMapper (3.0.0)
   - Result (3.2.4)
+  - RSLoadingView (1.1.2)
   - RxCocoa (4.1.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
-  - SkeletonView (1.0.4)
   - SwiftLint (0.24.2)
   - SwiftyBeaver (1.5.1)
 
 DEPENDENCIES:
   - Alamofire
   - Moya-ObjectMapper/RxSwift
+  - RSLoadingView
   - RxCocoa (~> 4.0)
   - SDWebImage
-  - SkeletonView
   - SwiftLint
   - SwiftyBeaver
 
@@ -42,13 +42,13 @@ SPEC CHECKSUMS:
   Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RSLoadingView: fdfeee9968b6dad2559169a97da0ad2580371f3a
   RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
-  SkeletonView: 933a9442b08c3550f61c2ae38a02456a74ad86f4
   SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
   SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
 
-PODFILE CHECKSUM: 7d8459caf66820443a69b3e8e4ad912cc0f3afc4
+PODFILE CHECKSUM: 0050fb75d0e096df1b45ac2393b8879d696bdaf0
 
 COCOAPODS: 1.3.1

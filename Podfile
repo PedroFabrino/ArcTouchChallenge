@@ -8,7 +8,7 @@ def shared_pods
   pod 'SwiftLint'
   pod 'RxCocoa',    '~> 4.0'
   pod 'Moya-ObjectMapper/RxSwift'
-  pod 'SkeletonView'
+  pod 'RSLoadingView'
 end
 
 

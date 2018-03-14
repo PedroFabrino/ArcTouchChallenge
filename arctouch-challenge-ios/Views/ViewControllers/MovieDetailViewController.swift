@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SkeletonView
 
 class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
     
@@ -34,15 +33,9 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
         fetchDetails()
     }
     
-    func showSkeleton() {
-        let gradient = SkeletonGradient(baseColor: UIColor.asbestos)
-        let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
-        view.showAnimatedGradientSkeleton(usingGradient: gradient, animation: animation)
-    }
-    
     func fetchDetails() {
         if let movie = movie {
-            showSkeleton()
+            self.view.showLoading()
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                 self.viewModel?.loadDetails(for: movie)
             })
@@ -53,8 +46,7 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
     
     override func setupBindings() {
         viewModel?.movie.asDriver().drive(onNext: { (movie) in
-            self.view.hideSkeleton()
-            
+            self.view.stopLoading()
             self.title = movie.title
             self.lblGenre.text = movie.genres?.first?.name
             self.txtViewOverview.text = movie.overview

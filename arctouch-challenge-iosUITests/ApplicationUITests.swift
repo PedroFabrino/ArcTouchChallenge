@@ -46,7 +46,7 @@ class ApplicationUITests: XCTestCase {
             app?.collectionViews.element.swipeUp()
             app?.collectionViews.element.swipeUp()
         }
-    }
+    } 
     
     func details(of cell: XCUIElement?) {
         if cell?.staticTexts.element(boundBy: 0).waitForExistence(timeout: 5) == true,
@@ -64,6 +64,7 @@ class ApplicationUITests: XCTestCase {
     func search(for query: String) {
         app?.searchFields.element(boundBy: 0).tap()
         app?.searchFields.element(boundBy: 0).typeText(query)
+        Thread.sleep(forTimeInterval: 2.5)
         if app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5) == true {
             let cell = app?.collectionViews.element.cells.element(boundBy: 0)
             let cellLabel = cell?.staticTexts.element(boundBy: 0).label

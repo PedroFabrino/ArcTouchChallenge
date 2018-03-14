@@ -48,6 +48,7 @@
 		23E89E3420598531002F5E14 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A422054A16500A2EA2E /* String+Extensions.swift */; };
 		23E89E382059BC9D002F5E14 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23391BA62057819A00B3D419 /* Log.swift */; };
 		23E89E3A2059C6D0002F5E14 /* MovieServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E89E392059C6D0002F5E14 /* MovieServiceTests.swift */; };
+		23E89E3E2059D2F8002F5E14 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E89E3D2059D2F8002F5E14 /* UIView+Extension.swift */; };
 		36B7940EB682E17E18A50FCA /* Pods_arctouch_challenge_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */; };
 		79021752D6644890ADDF3C08 /* Pods_arctouch_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724162C15CC9AF118B344AAF /* Pods_arctouch_challenge_ios.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		23E89E392059C6D0002F5E14 /* MovieServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTests.swift; sourceTree = "<group>"; };
+		23E89E3D2059D2F8002F5E14 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		257BF19EDFA9AABC97C801B1 /* Pods-arctouch-challenge-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2744861DF4600685719220FC /* Pods-arctouch-challenge-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arctouch_challenge_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 				23969A422054A16500A2EA2E /* String+Extensions.swift */,
 				2310C0232055245F000D779E /* UIImageView+Loader.swift */,
 				23391BA420576A9C00B3D419 /* Date+Extension.swift */,
+				23E89E3D2059D2F8002F5E14 /* UIView+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -546,10 +549,10 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RSLoadingView/RSLoadingView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -558,10 +561,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSLoadingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,11 +646,11 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RSLoadingView/RSLoadingView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -656,11 +659,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSLoadingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +706,7 @@
 				2310C01F20551F3D000D779E /* UpcomingViewModel.swift in Sources */,
 				23969A0020547A5C00A2EA2E /* AppDelegate.swift in Sources */,
 				23969A462054A30500A2EA2E /* SpokenLanguage.swift in Sources */,
+				23E89E3E2059D2F8002F5E14 /* UIView+Extension.swift in Sources */,
 				2310C022205521E1000D779E /* UpcomingMoviesViewController.swift in Sources */,
 				23969A4A2054A33F00A2EA2E /* ProductionCompany.swift in Sources */,
 				23391BA520576A9C00B3D419 /* Date+Extension.swift in Sources */,
