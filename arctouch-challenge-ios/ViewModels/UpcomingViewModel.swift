@@ -16,7 +16,7 @@ class UpcomingViewModel: BaseViewModel {
     
     var service: MovieService
     
-    var allMovies: [Movie] = []
+    fileprivate var allMovies: [Movie] = []
     
     init(movieService: MovieService = MovieService()) {
         self.service = movieService
@@ -27,8 +27,12 @@ class UpcomingViewModel: BaseViewModel {
         self.setupSearchEvent()
     }
     
+    func moviesCount() -> Int {
+        return allMovies.count
+    }
+    
     func fetchUpcomingMovies(for page: Int) {
-        print("Fetching page: \(page)")
+        Log.verbose("Fetching page: \(page)")
         service.upcomingMovies(for: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):
@@ -43,6 +47,7 @@ class UpcomingViewModel: BaseViewModel {
     }
     
     func search(with query: String, with page: Int = 1) {
+        Log.verbose("Will search for: \(query)")
         service.search(with: query, and: page).subscribe({ (event) in
             switch (event) {
             case .next(let movies):

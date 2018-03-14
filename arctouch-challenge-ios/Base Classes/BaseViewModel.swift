@@ -14,12 +14,4 @@ class BaseViewModel: NSObject {
     // MARK: Properties
     weak var delegate: ViewModelType?
     var disposeBag: DisposeBag = DisposeBag()
-    
-    private func setupObservers() {
-        
-    }
-    
-    private func removeObservers() {
-        
-    }
 }

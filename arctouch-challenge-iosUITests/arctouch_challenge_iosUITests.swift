@@ -9,7 +9,9 @@
 import XCTest
 
 class arctouch_challenge_iosUITests: XCTestCase {
-        
+    
+    var app: XCUIApplication?
+    
     override func setUp() {
         super.setUp()
         
@@ -18,7 +20,9 @@ class arctouch_challenge_iosUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        
+        app = XCUIApplication()
+        app?.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -28,9 +32,43 @@ class arctouch_challenge_iosUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testApp() {
+        lazyLoading()
+        details(of: app?.collectionViews.element.cells.element(boundBy: 1))
+        search(for: "Star Wars")
+    }
+    
+    func lazyLoading() {
+        if let _ = app?.collectionViews.element.waitForExistence(timeout: 5),
+            let _ = app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5){
+            app?.collectionViews.element.swipeUp()
+            app?.collectionViews.element.swipeUp()
+            app?.collectionViews.element.swipeUp()
+            app?.collectionViews.element.swipeUp()
+        }
+    }
+    
+    func details(of cell: XCUIElement?) {
+        if let _ = cell?.staticTexts.element(boundBy: 0).waitForExistence(timeout: 5),
+            let cellLabel = cell?.staticTexts.element(boundBy: 0).label {
+            cell?.tap()
+            if let exists = app?.navigationBars[cellLabel].waitForExistence(timeout: 5) {
+                XCTAssert(exists, "movie.title is not on the nav title")
+                app?.navigationBars.element(boundBy: 0).buttons.element(boundBy: 0).tap()
+            } else {
+                XCTAssert(false, "couldn't load movie's details")
+            }
+        }
+    }
+    
+    func search(for query: String) {
+        app?.searchFields.element(boundBy: 0).tap()
+        app?.searchFields.element(boundBy: 0).typeText(query)
+        if let _ = app?.collectionViews.element.cells.element(boundBy: 0).waitForExistence(timeout: 5) {
+            let cell = app?.collectionViews.element.cells.element(boundBy: 0)
+            let cellLabel = cell?.staticTexts.element(boundBy: 0).label
+            XCTAssert(cellLabel?.contains(query) ?? false, "movie.title \(String(describing: cellLabel)) doesn't match the searched query \(query)")
+        }
     }
     
 }

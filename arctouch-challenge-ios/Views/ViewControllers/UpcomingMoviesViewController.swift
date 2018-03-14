@@ -60,7 +60,13 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
         
         self.searchBar.delegate = self
         self.setupCollectionView()
+        self.setupNavigationBar()
         self.viewModel = UpcomingViewModel()
+    }
+
+    private func setupNavigationBar() {
+        title = NSLocalizedString("Upcoming Movies",
+                                       comment: "Title for navigation bar on UpcomingMovies List")
     }
     
     private func setupCollectionView() {
@@ -75,10 +81,6 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.hidesBarsOnSwipe = true
-    }
-    
     func fetchMovies(for page: Int) {
         viewModel?.fetchUpcomingMovies(for: upcomingMoviesPage)
     }
@@ -88,9 +90,11 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
                                                                    cellType: MovieCollectionViewCell.self)) {  row, model, cell in
                                                                     cell.presenter = MoviePresenter(movie: model)
                                                                     
-                                                                    if row == 16 * self.upcomingMoviesPage {
-                                                                        self.upcomingMoviesPage += 1
-                                                                        self.fetchMovies(for: self.upcomingMoviesPage)
+                                                                    if let numberOfMovies = self.viewModel?.moviesCount() {
+                                                                        if row >= (numberOfMovies - 1) {
+                                                                            self.upcomingMoviesPage += 1
+                                                                            self.fetchMovies(for: self.upcomingMoviesPage)
+                                                                        }
                                                                     }
             }
             .disposed(by: disposeBag)
@@ -99,6 +103,7 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
             guard let selectedMovie = self?.viewModel?.upcomingMovies.value[indexPath.row] else {
                 return
             }
+            self?.collectionView.deselectItem(at: indexPath, animated: true)
             self?.selectedMovie = selectedMovie
             self?.performSegue(withIdentifier: "showDetails", sender: self)
         }).disposed(by: disposeBag)
@@ -112,9 +117,8 @@ class UpcomingMoviesViewController: BaseViewController<UpcomingViewModel>, UISea
         
         searchBar.rx.text.subscribe(onNext: { [unowned self](query) in
             if (query?.count)! > 0 {
-                let firstIndex = IndexPath(row: 0, section: 0)
-                if let _ = self.collectionView.cellForItem(at: firstIndex) {
-                    self.collectionView.scrollToItem(at: firstIndex, at: .top, animated: true)
+                DispatchQueue.main.async {
+                    self.collectionView.setContentOffset(.zero, animated: true)
                 }
             } else {
                 self.upcomingMoviesPage = 1

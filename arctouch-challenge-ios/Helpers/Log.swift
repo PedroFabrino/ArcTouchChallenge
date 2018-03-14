@@ -21,7 +21,7 @@ class Log {
     private func setup() {
         let console = ConsoleDestination()
         
-        console.minLevel = .warning
+        console.minLevel = .verbose
         
         self.logger.addDestination(console)
         let file = FileDestination()

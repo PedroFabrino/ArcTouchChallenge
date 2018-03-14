@@ -56,18 +56,14 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
             self.view.hideSkeleton()
             
             self.title = movie.title
+            self.lblGenre.text = movie.genres?.first?.name
+            self.txtViewOverview.text = movie.overview
             
-            if let releaseDate = movie.releaseDate {
-                self.lblReleaseYear.text = "\(releaseDate.year)"
-            }
-            if let genreName = movie.genres?.first?.name {
-                self.lblGenre.text = genreName
-            }
-            if let overview = movie.overview {
-                self.txtViewOverview.text = overview
-            }
             if let path = movie.posterFullPath() {
                 self.imgPoster.loadImage(urlString: path)
+            }
+            if let releaseDate = movie.releaseDate {
+                self.lblReleaseYear.text = "\(releaseDate.year)"
             }
         }).disposed(by: disposeBag)
     }

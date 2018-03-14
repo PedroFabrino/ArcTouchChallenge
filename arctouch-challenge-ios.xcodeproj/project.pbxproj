@@ -32,11 +32,23 @@
 		23969A482054A32100A2EA2E /* ProductionCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A472054A32100A2EA2E /* ProductionCountry.swift */; };
 		23969A4A2054A33F00A2EA2E /* ProductionCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A492054A33F00A2EA2E /* ProductionCompany.swift */; };
 		23969A4C2054A3E000A2EA2E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4B2054A3E000A2EA2E /* Collection.swift */; };
-		23969A502054B70900A2EA2E /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4F2054B70900A2EA2E /* BaseProvider.swift */; };
+		23969A502054B70900A2EA2E /* KeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4F2054B70900A2EA2E /* KeyProvider.swift */; };
 		23969A522054B7A000A2EA2E /* Variables.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23969A512054B7A000A2EA2E /* Variables.plist */; };
 		23969A542054BFE300A2EA2E /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A532054BFE300A2EA2E /* MovieService.swift */; };
 		23969A582054DBDD00A2EA2E /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */; };
 		23969A592054DBDD00A2EA2E /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */; };
+		23E89E2A20598083002F5E14 /* MovieServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E89E2920598083002F5E14 /* MovieServiceTests.swift */; };
+		23E89E2B205980A3002F5E14 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A532054BFE300A2EA2E /* MovieService.swift */; };
+		23E89E2C205980A7002F5E14 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3C20549BFA00A2EA2E /* MovieProvider.swift */; };
+		23E89E2D20598418002F5E14 /* KeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4F2054B70900A2EA2E /* KeyProvider.swift */; };
+		23E89E2E2059842B002F5E14 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A3E20549E8700A2EA2E /* Movie.swift */; };
+		23E89E2F2059842D002F5E14 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4020549F1D00A2EA2E /* Genre.swift */; };
+		23E89E302059842F002F5E14 /* SpokenLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A452054A30500A2EA2E /* SpokenLanguage.swift */; };
+		23E89E3120598433002F5E14 /* ProductionCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A472054A32100A2EA2E /* ProductionCountry.swift */; };
+		23E89E3220598439002F5E14 /* ProductionCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A492054A33F00A2EA2E /* ProductionCompany.swift */; };
+		23E89E332059843B002F5E14 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A4B2054A3E000A2EA2E /* Collection.swift */; };
+		23E89E3420598531002F5E14 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23969A422054A16500A2EA2E /* String+Extensions.swift */; };
+		23E89E382059BC9D002F5E14 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23391BA62057819A00B3D419 /* Log.swift */; };
 		36B7940EB682E17E18A50FCA /* Pods_arctouch_challenge_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */; };
 		79021752D6644890ADDF3C08 /* Pods_arctouch_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724162C15CC9AF118B344AAF /* Pods_arctouch_challenge_ios.framework */; };
 /* End PBXBuildFile section */
@@ -89,11 +101,12 @@
 		23969A472054A32100A2EA2E /* ProductionCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCountry.swift; sourceTree = "<group>"; };
 		23969A492054A33F00A2EA2E /* ProductionCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCompany.swift; sourceTree = "<group>"; };
 		23969A4B2054A3E000A2EA2E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		23969A4F2054B70900A2EA2E /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
+		23969A4F2054B70900A2EA2E /* KeyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProvider.swift; sourceTree = "<group>"; };
 		23969A512054B7A000A2EA2E /* Variables.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Variables.plist; sourceTree = "<group>"; };
 		23969A532054BFE300A2EA2E /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		23969A562054DBDD00A2EA2E /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		23E89E2920598083002F5E14 /* MovieServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTests.swift; sourceTree = "<group>"; };
 		257BF19EDFA9AABC97C801B1 /* Pods-arctouch-challenge-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosUITests/Pods-arctouch-challenge-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2744861DF4600685719220FC /* Pods-arctouch-challenge-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arctouch-challenge-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41381D6D7CD74975DF6E4143 /* Pods_arctouch_challenge_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arctouch_challenge_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +201,7 @@
 		23969A1320547A5C00A2EA2E /* arctouch-challenge-iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				23E89E2820598052002F5E14 /* Service */,
 				23969A1420547A5C00A2EA2E /* arctouch_challenge_iosTests.swift */,
 				23969A1620547A5C00A2EA2E /* Info.plist */,
 			);
@@ -266,7 +280,7 @@
 			children = (
 				23969A3820549B8100A2EA2E /* BaseViewModel.swift */,
 				23969A3A20549B9400A2EA2E /* BaseViewController.swift */,
-				23969A4F2054B70900A2EA2E /* BaseProvider.swift */,
+				23969A4F2054B70900A2EA2E /* KeyProvider.swift */,
 			);
 			path = "Base Classes";
 			sourceTree = "<group>";
@@ -294,6 +308,14 @@
 				23969A572054DBDD00A2EA2E /* MovieCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		23E89E2820598052002F5E14 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				23E89E2920598083002F5E14 /* MovieServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		93E0A77C07EA8D2BAA63C4D4 /* Pods */ = {
@@ -500,13 +522,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-arctouch-challenge-iosTests/Pods-arctouch-challenge-iosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
@@ -655,7 +693,7 @@
 				23969A3720549B5800A2EA2E /* ViewModelType.swift in Sources */,
 				23969A542054BFE300A2EA2E /* MovieService.swift in Sources */,
 				2310C026205535A3000D779E /* MovieDetailViewController.swift in Sources */,
-				23969A502054B70900A2EA2E /* BaseProvider.swift in Sources */,
+				23969A502054B70900A2EA2E /* KeyProvider.swift in Sources */,
 				23969A4120549F1D00A2EA2E /* Genre.swift in Sources */,
 				2310C02820553612000D779E /* MovieDetailViewModel.swift in Sources */,
 				23969A482054A32100A2EA2E /* ProductionCountry.swift in Sources */,
@@ -668,7 +706,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E89E2B205980A3002F5E14 /* MovieService.swift in Sources */,
+				23E89E3120598433002F5E14 /* ProductionCountry.swift in Sources */,
+				23E89E382059BC9D002F5E14 /* Log.swift in Sources */,
+				23E89E2C205980A7002F5E14 /* MovieProvider.swift in Sources */,
+				23E89E2E2059842B002F5E14 /* Movie.swift in Sources */,
+				23E89E3420598531002F5E14 /* String+Extensions.swift in Sources */,
+				23E89E302059842F002F5E14 /* SpokenLanguage.swift in Sources */,
+				23E89E2A20598083002F5E14 /* MovieServiceTests.swift in Sources */,
 				23969A1520547A5C00A2EA2E /* arctouch_challenge_iosTests.swift in Sources */,
+				23E89E332059843B002F5E14 /* Collection.swift in Sources */,
+				23E89E2D20598418002F5E14 /* KeyProvider.swift in Sources */,
+				23E89E3220598439002F5E14 /* ProductionCompany.swift in Sources */,
+				23E89E2F2059842D002F5E14 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
