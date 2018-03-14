@@ -7,7 +7,7 @@ This code is for a challenge proposed by ArcTouch.
 What things you need to install the software and how to install them
 
 * Xcode 9.2
-* CocoaPods -> (https://guides.cocoapods.org/using/getting-started.html)
+* [CocoaPods - Installation Guide](https://guides.cocoapods.org/using/getting-started.html)
 
 ### Installing
 
